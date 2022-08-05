@@ -8,12 +8,12 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
 
         <!-- App css -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
 
     </head>
 
@@ -26,6 +26,7 @@
                 <ul class="list-unstyled topnav-menu float-right mb-0">
 
                     <li class="d-none d-sm-block">
+                        <!--buscador-->
                         <form class="app-search">
                             <div class="app-search-box">
                                 <div class="input-group">
@@ -41,12 +42,12 @@
                     </li>
 
                     <li class="dropdown notification-list">
+                        <!--Compana de notificaciones-->
                         <a class="nav-link dropdown-toggle  waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <i class="fe-bell noti-icon"></i>
                             <span class="badge badge-danger rounded-circle noti-icon-badge">5</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-lg">
-
                             <!-- item-->
                             <div class="dropdown-item noti-title">
                                 <h5 class="m-0 text-white">
@@ -58,7 +59,7 @@
                                 </h5>
                             </div>
 
-                            <div class="slimscroll noti-scroll">
+                                                        <div class="slimscroll noti-scroll">
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item active">
@@ -121,14 +122,6 @@
                                     </p>
                                 </a>
                             </div>
-
-                            <!-- All-->
-                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
-                                View all
-                                <i class="fi-arrow-right"></i>
-                            </a>
-
-                        </div>
                     </li>
 
                     <li class="dropdown notification-list">
@@ -491,11 +484,10 @@
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
         <!-- Vendor js -->
+        
         <script src="{{asset('js/app.js')}}"></script>
-        <script src="assets/js/vendor.min.js"></script>
+        <script src="public/assets/js/vendor.min.js"></script>
         <!-- App js -->
-        <script src="assets/js/app.min.js"></script>
-       
+        <script src="public/assets/js/app.min.js"></script>
     </body>
-</script>
 </html>
