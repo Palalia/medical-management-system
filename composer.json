@@ -14,7 +14,7 @@
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "3.2",
-        "mongodb/mongodb": "^1.13",
+        "mongodb/mongodb": "1.12",
         "mostafamaklad/laravel-permission-mongodb": "3.1",
         "yajra/laravel-datatables-oracle": "^9.7"
     },"provide" : {

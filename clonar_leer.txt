@@ -1,0 +1,30 @@
+composer install
+
+configurar mongodb/mongodb:
+  v^1.12
+  env:
+	DB_CONNECTION=mongodb
+	DB_HOST=127.0.0.1
+	DB_PORT=27017
+	DB_DATABASE=doctor
+	DB_USERNAME=
+	DB_PASSWORD=
+  database.php:
+	-'default' => env('DB_CONNECTION', 'mongodb'),
+	 -'connections' => [
+	  'mongodb' => [
+            'driver'   => 'mongodb',
+            'host'     => env('MONGO_DB_HOST', 'localhost'),
+            'port'     => env('MONGO_DB_PORT', 27017),
+            'database' => env('MONGO_DB_DATABASE'),
+            'username' => env('MONGO_DB_USERNAME'),
+            'password' => env('MONGO_DB_PASSWORD'),
+            'options'  => ['database' => 'doctor']//nombre de la base de datos
+        ]]
+  config/app.php:
+	-Jenssegers\Mongodb\MongodbServiceProvider::class,
+  https://github.com/jenssegers/laravel-mongodb#installation	
+npm install
+npm run dev
+php artisan key:generate
+php artisan migrate
