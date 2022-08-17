@@ -16,18 +16,19 @@
                   <h4 class="mt-1 mb-5 pb-1">Nosotros somos el equipo de loto</h4>
                 </div>
 
-                <form>
+                <form method="POST" action="{{ route('login') }}">
+                @csrf
                   <p>Por favor, ingrese a su cuenta</p>
 
                   <div class="form-outline mb-4">
-                    <input type="email" id="form2Example11" class="form-control"
-                      placeholder="Phone number or email address" />
-                    <label class="form-label" for="form2Example11">Usuaro</label>
+                    <input type="email" name="email" class="form-control"
+                      placeholder="Correo electronico"/>
+                    <label class="form-label">Usuaro</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" id="form2Example22" class="form-control" />
-                    <label class="form-label" for="form2Example22">Password</label>
+                    <input type="password" name="password" class="form-control" />
+                    <label class="form-label" for="form2Example22" >Password</label>
                   </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
@@ -48,12 +49,12 @@
             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
               <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                 <h4 class="mb-4">Somos más que una clinica</h4>
-                <p class="small mb-0">
+                <p class="xl mb-0">
                   <ul>
-                    <ui><i class="fa-solid fa-person-breastfeeding">Ginecologia</i></ui></br>
-                    <ui>Obstetricia</ui></br>
-                    <ui>Agenda</ui></br>
-                    <ui>Recetas Medicas</ui></br>
+                    <ui><i class="fa-solid fa-person-breastfeeding fa-lg"></i> Ginecologia</ui></br>
+                    <ui><i class="fa-solid fa-person-pregnant fa-lg"></i> Obstetricia</ui></br>
+                    <ui><i class="fa-solid fa-calendar-plus fa-lg"></i> Agenda</ui></br>
+                    <ui><i class="fa-solid fa-file-waveform fa-lg"></i> Recetas Medicas</ui></br>
                   </ul>
                 </p>
               </div>
