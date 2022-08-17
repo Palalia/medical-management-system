@@ -43,11 +43,11 @@
        
         "psr-4": {
                 "App\\": "app/",
+                "Jenssegers\\Mongodb\\": "src/",
                 "Database\\Factories\\": "database/factories/",
-                "Database\\Seeders\\": "database/seeders/",
-                "Jenssegers\\Mongodb\\": "src/"
+                "Database\\Seeders\\": "database/seeders/"
         }
-        
+
     },
     "autoload-dev": {
         "psr-4": {

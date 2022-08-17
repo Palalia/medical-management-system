@@ -14,7 +14,6 @@ class CreatePermissionCollections extends Migration
     public function up()
     {
         $collectionNames = config('permission.collection_names');
-
         Schema::table($collectionNames['roles'], function (Blueprint $collection) {
             $collection->unique(['name', 'guard_name']);
         });
