@@ -38,4 +38,8 @@ class User extends Eloquent implements Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function setPasswordAttribute($value)
+{
+   $this->attributes['password'] = bcrypt($value);
+}
 }
