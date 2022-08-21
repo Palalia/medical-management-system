@@ -1,41 +1,4 @@
 <ul class="metismenu" id="side-menu">
-
-    <li class="menu-title">Navigation</li>
-
-    <li>
-        <a href="javascript: void(0);">
-            <i class="la la-dashboard"></i>
-            <span class="badge badge-info badge-pill float-right">2</span>
-            <span> Dashboards </span>
-        </a>
-        <ul class="nav-second-level" aria-expanded="false">
-            <li>
-                <a href="index.html">Dashboard 1</a>
-            </li>
-            <li>
-                <a href="dashboard-2.html">Dashboard 2</a>
-            </li>
-        </ul>
-    </li>
-
-    <li>
-        <a href="javascript: void(0);">
-            <i class="la la-cube"></i>
-            <span> Apps </span>
-            <span class="menu-arrow"></span>
-        </a>
-        <ul class="nav-second-level" aria-expanded="false">
-            <li>
-                <a href="apps-calendar.html">Calendar</a>
-            </li>
-            <li>
-                <a href="apps-contacts.html">Contacts</a>
-            </li>
-            <li>
-                <a href="apps-tickets.html">Tickets</a>
-            </li>
-        </ul>
-    </li>
     <li>
         <a href="javascript: void(0);">
             <i class="la la-diamond"></i>

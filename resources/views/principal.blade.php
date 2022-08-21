@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Xeria - Responsive Admin Dashboard Template</title>
+        <title>Responsive Admin Dashboard </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -128,7 +128,7 @@
                         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <img src="assets/images/users/user-1.jpg" alt="user-image" class="rounded-circle">
                             <span class="pro-user-name ml-1">
-                                Marcia J. <i class="mdi mdi-chevron-down"></i>
+                                {{auth()->user()->name}} <i class="mdi mdi-chevron-down"></i>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -160,11 +160,14 @@
                             <div class="dropdown-divider"></div>
 
                             <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <i class="fe-log-out"></i>
-                                <span>Logout</span>
+                            <a href="{{ url('/logout') }}" class="dropdown-item notify-item"
+                             onclick="event.preventDefault(); localStorage.clear();  document.getElementById('logout-form').submit();">
+                             <i class="fe-lock"></i>
+                                <span>logout</span>
                             </a>
-
+                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" class="d-none">
+                                  {{ csrf_field() }}
+                            </form>
                         </div>
                     </li>
 
@@ -181,11 +184,9 @@
                 <div class="logo-box">
                     <a href="index.html" class="logo text-center">
                         <span class="logo-lg">
-                            <img src="assets/images/logo-light.png" alt="" height="16">
-                            <!-- <span class="logo-lg-text-light">Xeria</span> -->
+                            <img src="https://cdn.create.vista.com/api/media/small/272248224/stock-vector-beauty-pregnant-women-vector-icon"  style="width: 100px;" alt="logo">
                         </span>
                         <span class="logo-sm">
-                            <!-- <span class="logo-sm-text-dark">X</span> -->
                             <img src="assets/images/logo-sm.png" alt="" height="18">
                         </span>
                     </a>
@@ -484,10 +485,9 @@
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
         <!-- Vendor js -->
-        
         <script src="{{asset('js/app.js')}}"></script>
-        <script src="public/assets/js/vendor.min.js"></script>
+        <script src="{{asset('assets/js/vendor.min.js')}}"></script>
         <!-- App js -->
-        <script src="public/assets/js/app.min.js"></script>
+        <script src="{{asset('assets/js/app.min.js')}}"></script>
     </body>
 </html>

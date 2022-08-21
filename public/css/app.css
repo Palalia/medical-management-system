@@ -21467,3 +21467,17 @@ readers do not read off random characters that represent icons */
   }
   }
 /*FIN_LOGIN*/
+/*register*/
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+  }
+  .card-registration .select-arrow {
+  top: 13px;
+  }
+  .bg-azul {
+    background-color: -webkit-linear-gradient(to right, #52abee, #308bd0, #2671aa, #1b658b) !important;  
+  }
+/*register*/

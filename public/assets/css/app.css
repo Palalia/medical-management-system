@@ -10,7 +10,9 @@ File: Main Css File
 html {
   position: relative;
   min-height: 100%; }
-
+  #regiration_form fieldset:not(:first-of-type) {
+    display: none;
+  }
 body {
   padding-bottom: 60px;
   overflow-x: hidden; }
@@ -3468,4 +3470,5 @@ body.authentication-bg-pattern {
     .message-list li .col-mail-2 .date {
       text-align: right;
       padding-right: 10px;
-      padding-left: 20px; } }
+      padding-left: 20px; } 
+  }

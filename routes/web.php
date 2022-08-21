@@ -10,9 +10,11 @@
 |
 */
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::post('/register', ['RegisterController@register'])->name('register.perform');
+//Route::post('/register',[App\Http\Controllers\Auth\RegisterController::class,'create'])->name('register.create');
 Route::group(['middleware' => ['auth']], function(){
     Route::get('/', function () {
         return view('contenido/contenido');
     });
 });
+?>
