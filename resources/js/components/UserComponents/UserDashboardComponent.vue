@@ -10,7 +10,7 @@
                         <div class="card-body">
                              <!--{{-- <h3 class="text-center">Dashboard Content</h3> --}}-->
                              <!--@can('crear-usuario')-->
-                            <A class="btn btn-warning" href="">NUEVO </a>
+                            <a class="btn btn-warning" @click="$emit('update:menu',4)">NUEVO </a>
                             <!--@endcan-->
                             <table class="table table-striped mt-2">
                                 <thead style="background-color: #005388; ">
@@ -22,20 +22,20 @@
                                 </thead>
 
                                 <tbody>
-                                        <tr v-for="usuario in usuarios" :key="usuario.id">
-                                            <td style="display: none;">{{usuario.id}}</td>
-                                            <td>{{usuario.name}}</td>
-                                            <td>{{usuario.email}}</td>
+                                        <tr v-for="user in users" :key="user.id">
+                                            <td style="display: none;">{{user.id}}</td>
+                                            <td>{{user.name}}</td>
+                                            <td>{{user.email}}</td>
                                             <td>
-                                                <div v-if="!usuario.getRoleNames()">
+                                                <!--<div v-if="!usuario.getRoleNames()">
                                                     <h5 v-for="rolName in usuario.getRoleNames()" :key="rolName.id"><span class="badge badge-dark">{{rolName}}</span></h5>
-                                                </div>
+                                                </div>-->
                                             </td>
 
                                             <!--{{-- boton para editar --}}-->
                                             <td>
                                                 <!--@can('editar-usuario')-->
-                                                <a class="btn btn-info" href="">EDITAR</a>
+                                                <a class="btn btn-info" >EDITAR</a>
                                                 <!--@endcan-->
                                             <!--{{-- boton eliminar --}}-->
                                                 <!--@can('editar-usuario')-->
@@ -63,7 +63,32 @@
 
 <script>
 export default {
-
+    props:['menu'],
+   data(){
+        return{
+            users: [],
+        }
+   },
+    created() {
+        axios({
+            method: 'get',
+            url: '/api/getUsers',
+        })
+        .then(res=>{
+            if(res.status==200) {
+                res.data.forEach(item=>{
+                    this.users.push(item);
+                });            
+            }
+        });
+    },
+    methods:{
+        cambiarVista(){
+            console.log("dentro de cambiar visita");
+            console.log( $parent.menu);
+           // this.menu=4;
+        }
+    }
 }
 </script>
 

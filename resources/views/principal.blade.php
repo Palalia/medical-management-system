@@ -7,6 +7,7 @@
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="user" content="{(Auth::user())}">    
         <!-- App favicon -->
 
         <!-- App css -->

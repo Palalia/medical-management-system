@@ -11,4 +11,10 @@
     <template v-if="menu==3">
         <tabs></tabs>
     </template>
+    <template v-if="menu==usuarios">
+        <userdashboard :menu.sync="menu"></userdashboard>
+    </template>
+    <template v-if="menu==4">
+        <usercreate></usercreate>
+    </template>
 @endsection

@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 use Illuminate\Auth\Authenticatable as AuthenticatableTrait;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\Authenticatable;
 class User extends Eloquent implements Authenticatable
 {
@@ -38,8 +39,10 @@ class User extends Eloquent implements Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function setPasswordAttribute($value)
-{
-   $this->attributes['password'] = bcrypt($value);
-}
+    public function setPasswordAttribute($value){
+        $this->attributes['password'] = bcrypt($value);
+    }
+    public function getAllUsers(){
+
+    }
 }

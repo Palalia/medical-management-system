@@ -2,30 +2,17 @@
     <li>
         <a href="javascript: void(0);">
             <i class="la la-diamond"></i>
-            <span class="badge badge-danger float-right">New</span>
-            <span> Extra Pages </span>
+            <span>Acceso</span>
         </a>
         <ul class="nav-second-level" aria-expanded="false">
             <li>
-                <a href="extras-profile.html">Profile</a>
+                <a  href="extras-profile.html">Roles</a>
             </li>
             <li>
-                <a href="extras-timeline.html">Timeline</a>
+                <a href="extras-timeline.html">Permisos</a>
             </li>
             <li>
-                <a href="extras-invoice.html">Invoice</a>
-            </li>
-            <li>
-                <a href="extras-faqs.html">FAQs</a>
-            </li>
-            <li>
-                <a href="extras-pricing.html">Pricing</a>
-            </li>
-            <li>
-                <a href="extras-maintenance.html">Maintenance</a>
-            </li>
-            <li>
-                <a href="extras-coming-soon.html">Coming Soon</a>
+                <a @click="menu=usuarios">usuarios</a>
             </li>
         </ul>
     </li>
