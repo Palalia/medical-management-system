@@ -3559,13 +3559,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['route']
+});
 
 /***/ }),
 
@@ -3580,7 +3576,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
 //
 //
 //
@@ -44044,107 +44039,117 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("form", { attrs: { action: "", method: "post" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c(
-                      "div",
-                      { staticClass: "col-xs-12 col-sm-12 col-md-12" },
-                      [
-                        _c("div", { staticClass: "form-group" }, [
-                          _c("label", { attrs: { for: "name" } }, [
-                            _vm._v("NOMBRE"),
+                _c(
+                  "form",
+                  {
+                    attrs: {
+                      method: "POST",
+                      action: "this.route",
+                      enctype: "multipart/form-data",
+                    },
+                  },
+                  [
+                    _c("div", { staticClass: "row" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-xs-12 col-sm-12 col-md-12" },
+                        [
+                          _c("div", { staticClass: "form-group" }, [
+                            _c("label", { attrs: { for: "name" } }, [
+                              _vm._v("NOMBRE"),
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              staticClass: "form-control",
+                              attrs: { type: "text", name: "username" },
+                            }),
                           ]),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "form-control",
-                            attrs: { type: "text" },
-                          }),
-                        ]),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-xs-12 col-sm-12 col-md-12" },
-                      [
-                        _c("div", { staticClass: "form-group" }, [
-                          _c("label", { attrs: { for: "name" } }, [
-                            _vm._v("E-MAIL"),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "col-xs-12 col-sm-12 col-md-12" },
+                        [
+                          _c("div", { staticClass: "form-group" }, [
+                            _c("label", { attrs: { for: "name" } }, [
+                              _vm._v("E-MAIL"),
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              staticClass: "form-control",
+                              attrs: { type: "email", name: "email" },
+                            }),
                           ]),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "form-control",
-                            attrs: { type: "email" },
-                          }),
-                        ]),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-xs-12 col-sm-12 col-md-12" },
-                      [
-                        _c("div", { staticClass: "form-group" }, [
-                          _c("label", { attrs: { for: "name" } }, [
-                            _vm._v("PASSWORD"),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "col-xs-12 col-sm-12 col-md-12" },
+                        [
+                          _c("div", { staticClass: "form-group" }, [
+                            _c("label", { attrs: { for: "name" } }, [
+                              _vm._v("PASSWORD"),
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              staticClass: "form-control",
+                              attrs: { type: "password", name: "password1" },
+                            }),
                           ]),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "form-control",
-                            attrs: { type: "password" },
-                          }),
-                        ]),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-xs-12 col-sm-12 col-md-12" },
-                      [
-                        _c("div", { staticClass: "form-group" }, [
-                          _c("label", { attrs: { for: "name" } }, [
-                            _vm._v("CONFIRMAR PASSWORD"),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "col-xs-12 col-sm-12 col-md-12" },
+                        [
+                          _c("div", { staticClass: "form-group" }, [
+                            _c("label", { attrs: { for: "name" } }, [
+                              _vm._v("CONFIRMAR PASSWORD"),
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "password",
+                                name: "confirm-password",
+                              },
+                            }),
                           ]),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "form-control",
-                            attrs: {
-                              type: "password",
-                              name: "confirm-password",
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "col-xs-12 col-sm-12 col-md-12" },
+                        [
+                          _c("div", { staticClass: "form-group" }, [
+                            _c("label", { attrs: { for: "name" } }, [
+                              _vm._v("ROLES"),
+                            ]),
+                          ]),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "col-xs-12 col-sm-12 col-md-12" },
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-primary",
+                              attrs: { type: "submit" },
                             },
-                          }),
-                        ]),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-xs-12 col-sm-12 col-md-12" },
-                      [
-                        _c("div", { staticClass: "form-group" }, [
-                          _c("label", { attrs: { for: "name" } }, [
-                            _vm._v("ROLES"),
-                          ]),
-                        ]),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-xs-12 col-sm-12 col-md-12" },
-                      [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-primary",
-                            attrs: { type: "submit" },
-                          },
-                          [_vm._v("GUARDAR")]
-                        ),
-                      ]
-                    ),
-                  ]),
-                ]),
+                            [_vm._v("GUARDAR")]
+                          ),
+                        ]
+                      ),
+                    ]),
+                  ]
+                ),
               ]),
             ]),
           ]),

@@ -15,6 +15,6 @@
         <userdashboard :menu.sync="menu"></userdashboard>
     </template>
     <template v-if="menu==4">
-        <usercreate></usercreate>
+        <usercreate route="{{ route('register') }}"></usercreate>
     </template>
 @endsection

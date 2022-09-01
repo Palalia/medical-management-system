@@ -20,44 +20,38 @@
                                     </button>
                                 </div>
                             <!---@endif--->
-                            <form action="" method="post">        
+                           <form method="POST" action="this.route" enctype="multipart/form-data">                             
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <label for="name">NOMBRE</label>
-                                            <input type="text" class='form-control'>
-                                            <!--{!! Form::text('name', null, array('class'=>'form-control')) !!}-->
+                                            <input type="text" name="username" class='form-control'>
                                         </div>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <label for="name">E-MAIL</label>
-                                            <input type="email" class="form-control">
-                                            <!--{!! Form::text('email', null, array('class'=>'form-control')) !!}-->
+                                            <input type="email" name="email" class="form-control">
                                         </div>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <label for="name">PASSWORD</label>
-                                            <input type="password" class="form-control">
-                                            <!--{!! Form::password('password', array('class'=>'form-control')) !!}-->
+                                            <input type="password" name="password1" class="form-control">
                                         </div>
                                     </div>
-
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <label for="name">CONFIRMAR PASSWORD</label>
                                             <input type="password" name="confirm-password" class="form-control">
-                                            <!--{!! Form::password('confirm-password', array('class'=>'form-control')) !!}-->
                                         </div>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <label for="name">ROLES</label>
-                                            <!--{!! Form::select('roles[]', $roles,[], array('class'=>'form-control')) !!}-->
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-12">
@@ -75,7 +69,7 @@
 
 <script>
 export default {
-
+ props: ['route']
 }
 </script>
 
