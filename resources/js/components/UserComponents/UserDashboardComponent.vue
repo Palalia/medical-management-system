@@ -26,23 +26,17 @@
                                             <td style="display: none;">{{user.id}}</td>
                                             <td>{{user.name}}</td>
                                             <td>{{user.email}}</td>
-                                            <td>
-                                                <!--<div v-if="!usuario.getRoleNames()">
-                                                    <h5 v-for="rolName in usuario.getRoleNames()" :key="rolName.id"><span class="badge badge-dark">{{rolName}}</span></h5>
-                                                </div>-->
-                                            </td>
+                                            <td>{{user.rol}}</td>
 
-                                            <!--{{-- boton para editar --}}-->
+                                            <!---- boton para editar --->
                                             <td>
                                                 <!--@can('editar-usuario')-->
                                                 <a class="btn btn-info" >EDITAR</a>
                                                 <!--@endcan-->
-                                            <!--{{-- boton eliminar --}}-->
+                                            <!---- boton eliminar ---->
                                                 <!--@can('editar-usuario')-->
-                                                <!--{!! Form::open(['method'=> 'DELETE', 'route'=> ['usuarios.destroy', $usuario->id], 'style'=>'display:inline']) !!}
-                                                    {!! Form::submit('Borrar', ['class'=> 'btn btn-danger']) !!}
-                                                {!! Form::close() !!}
-                                                @endcan-->
+                                                <a class="btn btn-danger" >EDITAR</a>
+                                               <!---- @endcan-->
                                             </td>
                                         </tr>
                                 </tbody>
@@ -51,7 +45,7 @@
 
                             <!--{{-- Paginacion --}}
                             <div class="pagination justify-content-end">
-                                {!! $usuarios->links() !!}-->
+                                -->
                             </div>
 
                         </div>

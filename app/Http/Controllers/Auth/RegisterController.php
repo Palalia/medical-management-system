@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
-
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
@@ -11,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Log;
 use App\Http\Requests\RegisterRequest;
 use Illuminate\Http\Request;
+
 class RegisterController extends Controller
 {
     /*
@@ -40,16 +39,16 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        //$this->middleware('guest');
+        //$this->middleware('auth'); 
+        
     }
     public function showRegistrationForm(){
-        log::debug("dentro de show registration form");
         return view('auth/register');
     }
     /**/
     protected function validator(array $data)
     {
-        log::debug("dentro de validator");
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -66,21 +65,24 @@ class RegisterController extends Controller
     protected function create(Request $data)
     {
         log::debug("dentro de create");
-        //log::debug($data);
+        log::debug($data);
         $validator=Validator::make($data->all(), [
-            'email' => 'required|email:rfc,dns|unique:users,email',
-                'username' => 'required|unique:users,username',
+            'email' => 'required|unique:users,email',
+                'name' => 'required|unique:users,username',
                 'password1' => 'required|min:5',
-                'password2' => 'required|same:password'
-        ]);
-        if($validator)
-         User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'genero'=>$data['genero'],
-            'fecha_nacimiento'=>$data['fecha'],
-            'password' => Hash::make($data['password']),
-        ]);
-        return redirect('/')->with('success', "Account successfully registered.");
-     }
+                'password2' => 'required|same:password1',
+                'rol' => 'required|exists:roles,name',
+        ])->validate();
+        try{
+            User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' =>$data['password'],
+                'rol'=>$data['rol']
+            ]);
+            return response()->json([$data->all()]);
+        }catch (\Throwable $th) {
+            throw $th;
+        }
+    }
 }

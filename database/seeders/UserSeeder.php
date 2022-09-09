@@ -10,7 +10,7 @@ class UserSeeder extends Seeder
         User::create([
             'id'=>'1',
             'name'=>'admin',
-            'password'=> bcrypt('123456'),
+            'password'=>'123456',
             'email'=>'admin@gmail.com',
             'rol_id'=>1,
             'telefono'=>212665523

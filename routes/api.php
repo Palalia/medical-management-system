@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 Route::get('getUsers',[App\Http\Controllers\UserApiController::class,'getAllUsers']);
+Route::get('getRoles',[App\Http\Controllers\UserApiController::class,'getAllRoles']);
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

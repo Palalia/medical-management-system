@@ -12,7 +12,7 @@
                 <a href="extras-timeline.html">Permisos</a>
             </li>
             <li>
-                <a @click="menu=usuarios">usuarios</a>
+                <a @click="menu=5">usuarios</a>
             </li>
         </ul>
     </li>

@@ -11,7 +11,7 @@
     <template v-if="menu==3">
         <tabs></tabs>
     </template>
-    <template v-if="menu==usuarios">
+    <template v-if="menu==5">
         <userdashboard :menu.sync="menu"></userdashboard>
     </template>
     <template v-if="menu==4">
